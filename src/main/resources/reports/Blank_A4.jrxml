@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SimpleReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="051966d8-1b1d-4f1a-9f54-2e569c52cd9a">
+	<field name="_id"/>
+	<field name="real_name"/>
+	<field name="family_name"/>
+	<field name="license_plate"/>
+	<title>
+		<band height="50">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="30" uuid="f90f646d-3f98-4be5-bee2-34b10bc81aaf"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Simple Report with One Field]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="20">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20" uuid="a48dadc0-eb5e-459b-af21-df457ce06909"/>
+				<textFieldExpression><![CDATA[$F{_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="50" height="20" uuid="a48dadc0-eb5e-459b-af21-df457ce06909"/>
+				<textFieldExpression><![CDATA[$F{real_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="50" height="20" uuid="a48dadc0-eb5e-459b-af21-df457ce06909"/>
+				<textFieldExpression><![CDATA[$F{family_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="50" height="20" uuid="a48dadc0-eb5e-459b-af21-df457ce06909"/>
+				<textFieldExpression><![CDATA[$F{license_plate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
