@@ -9,11 +9,11 @@ plugins {
     id("org.jetbrains.kotlin.plugin.serialization") version "1.9.22"
 }
 
-group = "net.ddns.raywel"
-version = "0.0.1"
+group = "asia.raywel51"
+version = "0.0.2"
 
 application {
-    mainClass.set("net.ddns.raywel.ApplicationKt")
+    mainClass.set("asia.raywel51.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
@@ -25,7 +25,7 @@ repositories {
 
 tasks.jar {
     manifest {
-        attributes("Main-Class" to "net.ddns.raywel.ApplicationKt")
+        attributes("Main-Class" to "asia.raywel51.ApplicationKt")
     }
 }
 
@@ -33,6 +33,7 @@ tasks.jar {
 dependencies {
     implementation("io.ktor:ktor-server-content-negotiation-jvm")
     implementation("io.ktor:ktor-server-core-jvm")
+    implementation ("io.ktor:ktor-server-cors:$ktor_version")
     implementation("io.ktor:ktor-serialization-kotlinx-json-jvm")
     implementation("io.ktor:ktor-server-auto-head-response-jvm")
     implementation("io.ktor:ktor-server-cio-jvm")
@@ -40,6 +41,7 @@ dependencies {
     testImplementation("io.ktor:ktor-server-tests-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
     implementation ("io.ktor:ktor-server-call-logging:$ktor_version")
+    implementation("io.ktor:ktor-server-html-builder:$ktor_version")
 
     implementation("org.mongodb:mongodb-driver-kotlin-coroutine:4.11.0")
     implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
